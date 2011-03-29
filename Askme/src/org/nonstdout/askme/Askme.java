@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.Toast;
 import android.view.View;
 import android.util.SparseBooleanArray;
+import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.Vector;
@@ -64,7 +65,10 @@ public class Askme
 
     question_packs_ = get_question_packs();
 
-    list_adapter_ = new ArrayAdapter<String>(this, R.layout.list_item);
+    list_adapter_ = new ArrayAdapter<String>(
+        this,
+        android.R.layout.simple_list_item_multiple_choice);
+
     for(QuestionPack question_pack: question_packs_)
     {
       list_adapter_.add(question_pack.name());
@@ -101,14 +105,17 @@ public class Askme
   {
     Vector<Question> questions = new Vector<Question>();
 
-    SparseBooleanArray positions = getListView().getCheckedItemPositions();
-
     for (int i = 0; i < question_packs_.size(); ++i)
     {
-      if (!positions.get(i))
+      Log.i(TAG, new Integer(i).toString());
+
+      if (!getListView().isItemChecked(i))
       {
+      Log.i(TAG, "not checked");
         continue;
       }
+
+      Log.i(TAG, "checked");
 
       QuestionPack question_pack = question_packs_.get(i);
 
