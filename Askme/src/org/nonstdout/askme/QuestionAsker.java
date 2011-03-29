@@ -40,6 +40,7 @@ public class QuestionAsker
 
   public void start(Vector<Question> questions)
   {
+    questions_ = questions;
     next_question(0);
   }
 
