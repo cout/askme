@@ -107,7 +107,10 @@ public class QuestionAsker
 
   private void say_answer()
   {
-    speak(current_question_.answer(), 5000, ANSWER_ID);
+    StringBuffer buf;
+    buf.append("The answer is ");
+    buf.append(current_question_.answer());
+    speak(buf.toString(), 5000, ANSWER_ID);
   }
 
   @Override

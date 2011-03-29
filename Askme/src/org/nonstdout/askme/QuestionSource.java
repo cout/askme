@@ -72,7 +72,9 @@ class QuestionSource
     String line;
     while ((line = reader.readLine()) != null)
     {
-      if (QUESTION_PATTERN.matcher(line).matches())
+      Matcher m;
+
+      if ((m = QUESTION_PATTERN.matcher(line)).matches())
       {
         if (!current_question.equals(""))
         {
@@ -81,17 +83,17 @@ class QuestionSource
               current_answer.toString());
           questions.add(question);
 
-          current_question = new StringBuffer(line);
+          current_question = new StringBuffer(m.group(1)
           current_answer = new StringBuffer();
           append_to = current_question;
         }
       }
-      else if (ANSWER_PATTERN.matcher(line).matches())
+      else if ((m = ANSWER_PATTERN.matcher(line)).matches())
       {
-        current_answer = new StringBuffer(line);
+        current_answer = new StringBuffer(m.group(1));
         append_to = current_answer;
       }
-      else if (COMMENT_PATTERN.matcher(line).matches())
+      else if ((m = COMMENT_PATTERN.matcher(line)).matches())
       {
         // ignore
       }
