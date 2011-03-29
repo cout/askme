@@ -11,6 +11,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Toast;
 import android.view.View;
+import android.util.SparseBooleanArray;
 
 import java.util.ArrayList;
 import java.util.Vector;
@@ -100,28 +101,32 @@ public class Askme
   {
     Vector<Question> questions = new Vector<Question>();
 
+    SparseBooleanArray positions = getListView().getCheckedItemPositions();
+
     for (int i = 0; i < question_packs_.size(); ++i)
     {
+      if (!positions.get(i))
+      {
+        continue;
+      }
+
       QuestionPack question_pack = question_packs_.get(i);
 
-      if (list_adapter_.isEnabled(i))
+      try
       {
-        try
-        {
-          questions.addAll(question_pack.get_questions());
-        }
-        catch (java.io.IOException e)
-        {
-          StringBuffer buf = new StringBuffer();
-          buf.append("Unable to read question pack: ");
-          buf.append(e.toString());
+        questions.addAll(question_pack.get_questions());
+      }
+      catch (java.io.IOException e)
+      {
+        StringBuffer buf = new StringBuffer();
+        buf.append("Unable to read question pack: ");
+        buf.append(e.toString());
 
-          Toast toast = Toast.makeText(
-              this,
-              buf.toString(),
-              Toast.LENGTH_LONG);
-          toast.show();
-        }
+        Toast toast = Toast.makeText(
+            this,
+            buf.toString(),
+            Toast.LENGTH_LONG);
+        toast.show();
       }
     }
 
