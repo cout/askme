@@ -1,0 +1,17 @@
+X2 plus acid or base - reagents for halogenation of aldehyde or ketone
+X2 and PBr3 followed by H2O - reagents for HVZ
+X2 and PBr3 followed by H2O - reagents for halogenation of carboxylic acid
+LDA and THF at negative 78 C followed by R dash X - reagents for direct alkylation 
+LDA and THF at negative 78 C followed by R dash C dash X - reagents for direct alkylation of ester
+N a O E t followed by RBr followed by O H minus followed by H3O+ followed by heat - reagents for acetoacitic ester synthesis
+N a O E t followed by RBr followed by O H minus followed by H3O+ followed by heat - reagents for malonic ester synthesis
+R2NH followed by R dash C dash Br followed by heat followed by H2O - reagents for stork enamine reaction
+
+adds halogen at alpha carbon of aldehyde or ketone - X2 does this
+adds halogen to alpha carbon of carboxylic acid - X2 plus PBr3 followed by water does this
+forms thermodynamic enolate - LDA plus THF at minus 78 degrees C does this adds alkyl at alpha carbon - R dash X on an enolate does this
+adds alkyl at central alpha carbon - N a O E t followed by RBr does this to a dicarboxylic acid
+splits carboxylic acid - O H minus followed by H3O+ followed by heat does this to a dicarboxylic acid
+splits carboxylic acid and turns O R into O H - O H minus followed by H3O+ followed by heat does this to a diester
+replaces O with NR2 and creates double bond between carbonyl carbon and alpha carbon - R2NH on a ketone with two alpha hydrogens does this
+

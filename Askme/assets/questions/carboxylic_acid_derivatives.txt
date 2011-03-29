@@ -1,0 +1,48 @@
+"H2O" - acid chloride to a carboxylic acid
+"H2O" - hydrolysis of an acid chloride, to produce a carboxylic acid
+"SOCl2" or "PCl5" - carboxylic acid to an acid chloride
+
+"H2O" - acid anhydride to a carboxylic acid
+"H2O" - hydrolysis of an acid anhydride, to produce a carboxylic acid
+
+acid in "H2O" - ester to a carboxylic acid (acid catalyzed)
+acid in "H2O" - hydrolysis of an ester ester, to produce a carboxylic acid (acid catalyzed)
+"OH" minus followed by "H+" workup - ester to a carboxylic acid (base catalyzed)
+"OH" minus followed by "H+" workup - hydrolysis of an ester, to produce a carboxylic acid (base catalyzed)
+"ROH", acid, remove "H2O" - carboxylic acid to an ester
+"ROH" and acid - conversion of an ester to another ester (transesterification)
+"RMgX" and "E T 2 O" - Grignard reaction with an ester, to produce an alcohol
+
+acid in "H2O" - amide to a carboxylic acid (acid catalyzed)
+acid in "H2O" - hydrolysis of an amide, to produce a carboxylic acid (acid catalyzed)
+"OH" minus followed by "H+" workup - amide to a carboxylic acid (base catalyzed)
+"OH" minus followed by "H+" workup - hydrolysis of an amide, to produce a carboxylic acid (base catalyzed)
+NH3 and heat - carboxylic acid to an amide
+
+"H3O+" and heat - nitrile to a carboxylic acid (acid catalyzed)
+"OH" minus, "H2O", and heat; followed by "H+" workup - amide to a carboxylic acid (base catalyzed)
+dibal "H" followed by H2O workup - reduction of a nitrile to an aldehyde
+RMgX (grignard) or RLi (organolithium) followed by H3O+ workup - nitrile to a keetone
+
+enolate - acid chloride to an acid anhydride
+"ROH" in pyruvate - acid chloride to an ester
+R NHR prime - acid achloride to an amide
+"ROH" - acid anhydride to an ester
+R "NHR" prime - acid anhydride to an amide
+R "NHR" prime - ester to an amide
+"P4" "O10", heat and remove water - amide to a nitrile
+
+benzene and "ALCL3" - Friedel-crafts acylation, with an acid chloride
+benzene and "ALCL3" - Friedel-crafts acylation, with an acid anhydride
+benzene and "ALCL3" (Friedel-crafts acylation) - acid chloride to a keetone
+benzene and "ALCL3" (Friedel-crafts acylation) - acid anhydride to an aryl keetone
+
+"LAH" followed by "H3O+" - reduction of a carboxylic acid to an alcohol
+"LAH" followed by "H3O+" - acid chloride to an aldehyde
+"LAH" followed by "H3O+" - reduction of an ester to an alcohol
+"ROH" and acid; remove water - Fischer esterification of a carboxylic acid
+"ROH" and acid; remove water - carboxylic acid to a lactone
+
+heat - decarboxylation of a diecarboxylic acid to produce a carboxylic acid
+
+

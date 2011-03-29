@@ -1,0 +1,40 @@
+negative 10 - "PKA" of hydrogen iodide
+negative 9 - "PKA" of hydrogen bromide
+negative 7 - "PKA" of hydrogen chloride
+3.2 - "PKA" of hydrogen fluoride
+
+negative 9 - "PKA" of sulfuric acid
+negative 9 - "PKA" of "H2SO4"
+
+negative 1.74 - "PKA" of "H3O+"
+negative 1.4 - "PKA" of "HNO3"
+9.2 - "PKA" of "NH4+"
+15.7 - "PKA" of "H2O"
+15.7 - "PKA" of water
+38 - "PKA" of "NH3"
+48 - "PKA" of "CH4"
+
+25 - "PKA" of ethyne
+44 - "PKA" of ethene
+50 - "PKA" of ethane
+
+# -12 - pKa of KSbF₆
+# -6.5 - pKa of C₆H₅SO₃H
+# -3.8 - pKa of (CH₃)₂O⁺H
+# -2.9 - pKa of (CH₃)₂C=O⁺H
+# -2.5 - pKa of CH₃OH₂
+# 0.18 - pKa of CF₃CO₂H
+# 3.9 - pKa of H₂Se
+# 4.21 - pKa of C₆H₅CO₂H
+# 4.63 - pKa of C₆H₅NH₃⁺
+# 4.75 - pKa of CH₃CO₂H
+# 6.35 - pKa of H₂CO₃
+# 7.0 - pKa of H₂S
+# 9.0 - pKa of CH₃COCH₂COCH₃
+# 9.9 - pKa of C₆H₅OH
+# 10.2 - pKa of HCO₃¯
+# 10.6 - pKa of CH₃NH₃⁺
+# 16 - pKa of CH₃CH₂OH
+# 18 - pKa of (CH₃)₃COH
+# 19.2 - pKa of CH₃COCH₃
+
