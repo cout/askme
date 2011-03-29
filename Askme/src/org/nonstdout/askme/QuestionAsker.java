@@ -77,6 +77,11 @@ public class QuestionAsker
 
   private void next_question(int delay)
   {
+    if (questions_.size() == 0)
+    {
+      return;
+    }
+
     current_question_ = pick_question();
     speak(current_question_.question(), delay, QUESTION_ID);
   }

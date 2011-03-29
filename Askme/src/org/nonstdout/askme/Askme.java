@@ -39,8 +39,10 @@ public class Askme
     }
     catch (java.io.IOException e)
     {
-      Toast toast = new Toast(this);
-      toast.setText("Unable to get list of question packs");
+      Toast toast = Toast.makeText(
+          this,
+          "Unable to get list of question packs",
+          Toast.LENGTH_LONG);
       toast.show();
       return new Vector<QuestionPack>();
     }
@@ -110,9 +112,14 @@ public class Askme
         }
         catch (java.io.IOException e)
         {
-          Toast toast = new Toast(this);
-          toast.setText("Unable to read question pack");
-          toast.show();
+          StringBuffer buf = new StringBuffer();
+          buf.append("Unable to read question pack: ");
+          buf.append(e.toString());
+
+          Toast toast = Toast.makeText(
+              this,
+              buf.toString(),
+              Toast.LENGTH_LONG);
         }
       }
     }
