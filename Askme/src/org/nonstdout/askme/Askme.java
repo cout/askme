@@ -66,11 +66,6 @@ public class Askme
     list_view.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
 
     tts_ = new TextToSpeech(this, this);
-    int result = tts_.setOnUtteranceCompletedListener(this);
-    if (result != TextToSpeech.SUCCESS)
-    {
-      Log.e(TAG, "Could not set utterance completed listener");
-    }
 
     start_button_ = (Button) findViewById(R.id.button_start);
     start_button_.setOnClickListener(new View.OnClickListener() {
@@ -107,6 +102,11 @@ public class Askme
       }
       else
       {
+        result = tts_.setOnUtteranceCompletedListener(this);
+        if (result != TextToSpeech.SUCCESS)
+        {
+          Log.e(TAG, "Could not set utterance completed listener");
+        }
         // start_button_.setEnabled(true);
       }
     }
