@@ -2,6 +2,7 @@ package org.nonstdout.askme;
 
 import android.app.ListActivity;
 import android.os.Bundle;
+import android.os.Handler;
 import android.widget.ListView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -14,7 +15,8 @@ import java.util.Locale;
 
 public class Askme
   extends ListActivity
-  implements TextToSpeech.OnInitListener
+  implements TextToSpeech.OnInitListener,
+             TextToSpeech.OnUtteranceCompletedListener
 {
   public static final String TAG = "Askme";
 
@@ -27,6 +29,15 @@ public class Askme
 
   private Button start_button_;
   private Button stop_button_;
+
+  private Handler handler_;
+
+  private Runnable speech_task_ = new Runnable() {
+    public void run()
+    {
+      // TODO
+    }
+  };
 
   /** Called when the activity is first created. */
   @Override
@@ -60,8 +71,10 @@ public class Askme
     });
   }
 
-  public void onInit(int status) {
-    if (status == TextToSpeech.SUCCESS) {
+  public void onInit(int status)
+  {
+    if (status == TextToSpeech.SUCCESS)
+    {
       int result = tts_.setLanguage(Locale.US);
       if (result == TextToSpeech.LANG_MISSING_DATA ||
           result == TextToSpeech.LANG_NOT_SUPPORTED)
@@ -79,10 +92,25 @@ public class Askme
     }
   }
 
-  private void start() {
-    tts_.speak("Hello", TextToSpeech.QUEUE_FLUSH, null);
+  public void onUtteranceCompleted(String utterance_id)
+  {
+    speak("Hello again", 3);
   }
 
-  private void stop() {
+  private void speak(String str, long delay)
+  {
+    handler_.removeCallbacks(speech_task_);
+    handler_.postDelayed(speech_task_, 1000);
+    tts_.speak(str, TextToSpeech.QUEUE_FLUSH, null);
+  }
+
+  private void start()
+  {
+    speak("Hello", 0);
+  }
+
+  private void stop()
+  {
+    handler_.removeCallbacks(speech_task_);
   }
 }
