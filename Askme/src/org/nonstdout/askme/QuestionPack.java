@@ -27,7 +27,8 @@ class QuestionPack
   private String name_;
   private String path_;
 
-  public Vector<Question> questions(String path)
+  public Vector<Question> get_questions()
+    throws java.io.IOException
   {
     return question_source_.read_question_pack(this);
   }

@@ -25,8 +25,11 @@ public class Askme
 
   private QuestionAsker question_asker_;
   private QuestionSource question_source_;
+  private Vector<QuestionPack> question_packs_;
 
-  private Vector<QuestionPack> question_packs()
+  private ArrayAdapter<String> list_adapter_;
+
+  private Vector<QuestionPack> get_question_packs()
   {
     Vector<QuestionPack> question_packs;
     
@@ -56,12 +59,14 @@ public class Askme
     question_asker_ = new QuestionAsker(this);
     question_source_ = new QuestionSource(this);
 
-    ArrayAdapter<String> list_adapter = new ArrayAdapter<String>(this, R.layout.list_item);
-    for(QuestionPack question_pack: question_packs())
+    question_packs_ = get_question_packs();
+
+    list_adapter_ = new ArrayAdapter<String>(this, R.layout.list_item);
+    for(QuestionPack question_pack: question_packs_)
     {
-      list_adapter.add(question_pack.name());
+      list_adapter_.add(question_pack.name());
     }
-    setListAdapter(list_adapter);
+    setListAdapter(list_adapter_);
 
     final ListView list_view = getListView();
     list_view.setItemsCanFocus(false);
@@ -92,9 +97,26 @@ public class Askme
   private void start()
   {
     Vector<Question> questions = new Vector<Question>();
-    questions.add(new Question("question1", "answer1"));
-    questions.add(new Question("question2", "answer2"));
-    questions.add(new Question("question3", "answer3"));
+
+    for (int i = 0; i < question_packs_.size(); ++i)
+    {
+      QuestionPack question_pack = question_packs_.get(i);
+
+      if (list_adapter_.isEnabled(i))
+      {
+        try
+        {
+          questions.addAll(question_pack.get_questions());
+        }
+        catch (java.io.IOException e)
+        {
+          Toast toast = new Toast(this);
+          toast.setText("Unable to read question pack");
+          toast.show();
+        }
+      }
+    }
+
     question_asker_.start(questions);
   }
 
