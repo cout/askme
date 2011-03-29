@@ -5,6 +5,7 @@ import org.nonstdout.askme.QuestionPack;
 
 import android.content.res.AssetManager;
 import android.content.Context;
+import android.util.Log;
 
 import java.util.Vector;
 import java.io.InputStream;
@@ -15,6 +16,9 @@ import java.util.regex.Pattern;
 
 class QuestionSource
 {
+  public static final String TAG = "Askme";
+  public static final String SOURCE_DIR = "questions";
+
   public QuestionSource(Context context)
   {
     context_ = context;
@@ -24,13 +28,18 @@ class QuestionSource
     throws java.io.IOException
   {
     AssetManager am = context_.getResources().getAssets();
-    String[] paths = am.list("questions");
+    String[] paths = am.list(SOURCE_DIR);
 
     Vector<QuestionPack> question_packs = new Vector<QuestionPack>();
 
     for (String path: paths)
     {
-      QuestionPack question_pack = new QuestionPack(this, path);
+      StringBuffer full_path = new StringBuffer();
+      full_path.append(SOURCE_DIR);
+      full_path.append("/");
+      full_path.append(path);
+
+      QuestionPack question_pack = new QuestionPack(this, full_path.toString());
       question_packs.add(question_pack);
     }
 
@@ -91,6 +100,8 @@ class QuestionSource
         append_to.append(line);
       }
     }
+
+    in.close();
 
     return questions;
   }
