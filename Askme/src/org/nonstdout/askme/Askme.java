@@ -107,15 +107,10 @@ public class Askme
 
     for (int i = 0; i < question_packs_.size(); ++i)
     {
-      Log.i(TAG, new Integer(i).toString());
-
       if (!getListView().isItemChecked(i))
       {
-      Log.i(TAG, "not checked");
         continue;
       }
-
-      Log.i(TAG, "checked");
 
       QuestionPack question_pack = question_packs_.get(i);
 
