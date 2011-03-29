@@ -39,7 +39,10 @@ class QuestionSource
       full_path.append("/");
       full_path.append(path);
 
-      QuestionPack question_pack = new QuestionPack(this, full_path.toString());
+      QuestionPack question_pack = new QuestionPack(
+          this,
+          path,
+          full_path.toString());
       question_packs.add(question_pack);
     }
 

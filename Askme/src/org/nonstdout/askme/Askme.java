@@ -3,6 +3,7 @@ package org.nonstdout.askme;
 import org.nonstdout.askme.Question;
 import org.nonstdout.askme.QuestionAsker;
 import org.nonstdout.askme.QuestionSource;
+import org.nonstdout.askme.QuestionPack;
 
 import android.app.ListActivity;
 import android.os.Bundle;
@@ -29,7 +30,7 @@ public class Askme
   private QuestionSource question_source_;
   private Vector<QuestionPack> question_packs_;
 
-  private ArrayAdapter<String> list_adapter_;
+  private ArrayAdapter<QuestionPack> list_adapter_;
 
   private Vector<QuestionPack> get_question_packs()
   {
@@ -65,14 +66,10 @@ public class Askme
 
     question_packs_ = get_question_packs();
 
-    list_adapter_ = new ArrayAdapter<String>(
+    list_adapter_ = new ArrayAdapter<QuestionPack>(
         this,
-        android.R.layout.simple_list_item_multiple_choice);
-
-    for(QuestionPack question_pack: question_packs_)
-    {
-      list_adapter_.add(question_pack.name());
-    }
+        android.R.layout.simple_list_item_multiple_choice,
+        question_packs_);
     setListAdapter(list_adapter_);
 
     final ListView list_view = getListView();

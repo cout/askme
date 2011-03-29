@@ -16,10 +16,13 @@ class QuestionPack
     return path_;
   }
 
-  QuestionPack(QuestionSource question_source, String path)
+  QuestionPack(
+      QuestionSource question_source,
+      String name,
+      String path)
   {
     question_source_ = question_source;
-    name_ = path;
+    name_ = name;
     path_ = path;
   }
 
@@ -31,6 +34,11 @@ class QuestionPack
     throws java.io.IOException
   {
     return question_source_.read_question_pack(this);
+  }
+
+  public String toString()
+  {
+    return name_;
   }
 }
 
