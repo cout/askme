@@ -120,6 +120,7 @@ public class Askme
               this,
               buf.toString(),
               Toast.LENGTH_LONG);
+          toast.show();
         }
       }
     }
