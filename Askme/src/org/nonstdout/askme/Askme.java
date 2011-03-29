@@ -30,7 +30,7 @@ public class Askme
   private Button start_button_;
   private Button stop_button_;
 
-  private Handler handler_;
+  private Handler handler_ = new Handler();
 
   private Runnable speech_task_ = new Runnable() {
     public void run()
