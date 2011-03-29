@@ -1,23 +1,20 @@
 package org.nonstdout.askme;
 
+import org.nonstdout.askme.Question;
+import org.nonstdout.askme.QuestionAsker;
+
 import android.app.ListActivity;
 import android.os.Bundle;
-import android.os.Handler;
 import android.widget.ListView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.speech.tts.TextToSpeech;
-import android.util.Log;
 import android.view.View;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Locale;
+import java.util.Vector;
 
 public class Askme
   extends ListActivity
-  implements TextToSpeech.OnInitListener,
-             TextToSpeech.OnUtteranceCompletedListener
 {
   public static final String TAG = "Askme";
 
@@ -26,29 +23,10 @@ public class Askme
   private ArrayAdapter<String> list_adapter_;
   private static final String[] strings_ = new String[] { "foo", "bar", "baz" };
 
-  private TextToSpeech tts_;
-
   private Button start_button_;
   private Button stop_button_;
 
-  private Handler handler_ = new Handler();
-
-  private String speech_text_;
-  private String speech_id_;
-
-  private Runnable speech_task_ = new Runnable() {
-    public void run()
-    {
-      Log.e(TAG, speech_id_);
-      Log.e(TAG, speech_text_);
-      HashMap<String, String> params = new HashMap<String, String>();
-      params.put(TextToSpeech.Engine.KEY_PARAM_UTTERANCE_ID, speech_id_);
-      tts_.speak(
-          speech_text_,
-          TextToSpeech.QUEUE_FLUSH,
-          params);
-    }
-  };
+  private QuestionAsker asker_;
 
   /** Called when the activity is first created. */
   @Override
@@ -65,7 +43,7 @@ public class Askme
     list_view.setItemsCanFocus(false);
     list_view.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
 
-    tts_ = new TextToSpeech(this, this);
+    asker_ = new QuestionAsker(this);
 
     start_button_ = (Button) findViewById(R.id.button_start);
     start_button_.setOnClickListener(new View.OnClickListener() {
@@ -86,59 +64,20 @@ public class Askme
   public void onDestroy()
   {
     super.onDestroy();
-    tts_.shutdown();
-  }
-
-  @Override
-  public void onInit(int status)
-  {
-    if (status == TextToSpeech.SUCCESS)
-    {
-      int result = tts_.setLanguage(Locale.US);
-      if (result == TextToSpeech.LANG_MISSING_DATA ||
-          result == TextToSpeech.LANG_NOT_SUPPORTED)
-      {
-        Log.e(TAG, "Language is not available.");
-      }
-      else
-      {
-        result = tts_.setOnUtteranceCompletedListener(this);
-        if (result != TextToSpeech.SUCCESS)
-        {
-          Log.e(TAG, "Could not set utterance completed listener");
-        }
-        // start_button_.setEnabled(true);
-      }
-    }
-    else
-    {
-      Log.e(TAG, "Could not initialize TextToSpeech.");
-    }
-  }
-
-  @Override
-  public void onUtteranceCompleted(String utterance_id)
-  {
-    Log.e(TAG, "utterance complete");
-    speak("Hello again", 3000, "HELLO_AGAIN");
-  }
-
-  private void speak(String str, long delay, String utterance_id)
-  {
-    speech_text_ = str;
-    speech_id_ = utterance_id;
-    handler_.removeCallbacks(speech_task_);
-    handler_.postDelayed(speech_task_, delay);
+    asker_.shutdown();
   }
 
   private void start()
   {
-    speak("Hello", 0, "HELLO");
+    Vector<Question> questions = new Vector<Question>();
+    questions.add(new Question("question1", "answer1"));
+    questions.add(new Question("question2", "answer2"));
+    questions.add(new Question("question3", "answer3"));
+    asker_.start(questions);
   }
 
   private void stop()
   {
-    tts_.stop();
-    handler_.removeCallbacks(speech_task_);
+    asker_.stop();
   }
 }
