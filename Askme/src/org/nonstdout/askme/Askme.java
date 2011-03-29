@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.View;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Locale;
 
 public class Askme
@@ -32,10 +33,18 @@ public class Askme
 
   private Handler handler_ = new Handler();
 
+  private String speech_text_;
+  private String speech_id_;
+
   private Runnable speech_task_ = new Runnable() {
     public void run()
     {
-      // TODO
+      HashMap<String, String> params = new HashMap<String, String>();
+      params.put(TextToSpeech.Engine.KEY_PARAM_UTTERANCE_ID, speech_id_);
+      tts_.speak(
+          speech_text_,
+          TextToSpeech.QUEUE_FLUSH,
+          params);
     }
   };
 
@@ -94,23 +103,27 @@ public class Askme
 
   public void onUtteranceCompleted(String utterance_id)
   {
-    speak("Hello again", 3);
+    Log.e(TAG, "utterance complete");
+    speak("Hello again", 3000, "HELLO_AGAIN");
   }
 
-  private void speak(String str, long delay)
+  private void speak(String str, long delay, String utterance_id)
   {
+    Log.e(TAG, str);
+    speech_text_ = str;
+    speech_id_ = utterance_id;
     handler_.removeCallbacks(speech_task_);
-    handler_.postDelayed(speech_task_, 1000);
-    tts_.speak(str, TextToSpeech.QUEUE_FLUSH, null);
+    handler_.postDelayed(speech_task_, delay);
   }
 
   private void start()
   {
-    speak("Hello", 0);
+    speak("Hello", 0, "HELLO");
   }
 
   private void stop()
   {
+    tts_.stop();
     handler_.removeCallbacks(speech_task_);
   }
 }
