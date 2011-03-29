@@ -39,6 +39,8 @@ public class Askme
   private Runnable speech_task_ = new Runnable() {
     public void run()
     {
+      Log.e(TAG, speech_id_);
+      Log.e(TAG, speech_text_);
       HashMap<String, String> params = new HashMap<String, String>();
       params.put(TextToSpeech.Engine.KEY_PARAM_UTTERANCE_ID, speech_id_);
       tts_.speak(
@@ -64,6 +66,11 @@ public class Askme
     list_view.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
 
     tts_ = new TextToSpeech(this, this);
+    int result = tts_.setOnUtteranceCompletedListener(this);
+    if (result != TextToSpeech.SUCCESS)
+    {
+      Log.e(TAG, "Could not set utterance completed listener");
+    }
 
     start_button_ = (Button) findViewById(R.id.button_start);
     start_button_.setOnClickListener(new View.OnClickListener() {
@@ -80,6 +87,14 @@ public class Askme
     });
   }
 
+  @Override
+  public void onDestroy()
+  {
+    super.onDestroy();
+    tts_.shutdown();
+  }
+
+  @Override
   public void onInit(int status)
   {
     if (status == TextToSpeech.SUCCESS)
@@ -101,6 +116,7 @@ public class Askme
     }
   }
 
+  @Override
   public void onUtteranceCompleted(String utterance_id)
   {
     Log.e(TAG, "utterance complete");
@@ -109,7 +125,6 @@ public class Askme
 
   private void speak(String str, long delay, String utterance_id)
   {
-    Log.e(TAG, str);
     speech_text_ = str;
     speech_id_ = utterance_id;
     handler_.removeCallbacks(speech_task_);
