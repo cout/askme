@@ -1,24 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
   android:orientation="vertical"
   android:layout_width="fill_parent"
   android:layout_height="fill_parent"
   >
 
-  <ListView
-    android:id="@android:id/list"
-    android:layout_width="fill_parent" 
-    android:layout_height="wrap_content" 
-    />
-    <!-- android:stackFromBotton="true" -->
-    <!-- android:transcriptMode="normal" -->
-    <!-- android:layout_weight="normal" -->
-    <!-- android:drawSelectorOnTop="false" -->
+  <ScrollView
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_alignParentTop="true"
+    >
+
+    <ListView
+      android:id="@android:id/list"
+      android:layout_width="fill_parent" 
+      android:layout_height="fill_parent" 
+      />
+      <!-- android:stackFromBotton="true" -->
+      <!-- android:transcriptMode="normal" -->
+      <!-- android:layout_weight="normal" -->
+      <!-- android:drawSelectorOnTop="false" -->
+  </ScrollView>
 
   <LinearLayout
     android:orientation="horizontal"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
     >
 
     <Button
@@ -37,5 +45,5 @@
 
   </LinearLayout>
 
-</LinearLayout>
+</RelativeLayout>
 
