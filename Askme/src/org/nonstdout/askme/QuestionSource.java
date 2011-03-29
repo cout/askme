@@ -83,7 +83,7 @@ class QuestionSource
               current_answer.toString());
           questions.add(question);
 
-          current_question = new StringBuffer(m.group(1)
+          current_question = new StringBuffer(m.group(1));
           current_answer = new StringBuffer();
           append_to = current_question;
         }
