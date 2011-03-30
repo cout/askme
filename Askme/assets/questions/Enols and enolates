@@ -8,19 +8,19 @@ Question: reagents for halogenation of carboxylic acid
 Answer: X2 and PBr3 followed by H2O
 
 Question: reagents for direct alkylation 
-Answer: LDA and THF at negative 78 C followed by R dash X
+Answer: make enolate, then R dash X
 
-Question: reagents for direct alkylation of ester
-Answer: LDA and THF at negative 78 C followed by R dash C dash X
+# Question: reagents for direct alkylation of ester
+# Answer: make enolate, R dash C dash X
 
 Question: reagents for acetoacitic ester synthesis
-Answer: N a O E t followed by RBr followed by O H minus followed by H3O+ followed by heat
+Answer: N a O E t, followed by RBr, followed by O H minus, followed by H3O+ and heat
 
 Question: reagents for malonic ester synthesis
-Answer: N a O E t followed by RBr followed by O H minus followed by H3O+ followed by heat
+Answer: N a O E t, followed by RBr, followed by O H minus, followed by H3O+ and heat
 
 Question: reagents for stork enamine reaction
-Answer: R2NH followed by R dash C dash Br followed by heat followed by H2O
+Answer: R2NH, followed by R dash C dash Br, followed by heat, followed by H2O
 
 Question: X2 does this
 Answer: adds halogen at alpha carbon of aldehyde or ketone
@@ -37,12 +37,12 @@ Answer: adds alkyl at alpha carbon
 Question: N a O E t followed by RBr does this to a dicarboxylic acid
 Answer: adds alkyl at central alpha carbon
 
-Question: O H minus followed by H3O+ followed by heat does this to a dicarboxylic acid
+Question: O H minus followed by H3O+, followed by heat does this to a dicarboxylic acid
 Answer: splits carboxylic acid
 
-Question: O H minus followed by H3O+ followed by heat does this to a diester
+Question: O H minus followed by H3O+, followed by heat does this to a diester
 Answer: splits carboxylic acid and turns O R into O H
 
 Question: R2NH on a ketone with two alpha hydrogens does this
-Answer: replaces O with NR2 and creates double bond between carbonyl carbon and alpha carbon
+Answer: replaces O with NR2, and create double bond between carbonyl carbon and alpha carbon
 
