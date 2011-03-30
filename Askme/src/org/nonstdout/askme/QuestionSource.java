@@ -59,7 +59,7 @@ class QuestionSource
       "^(\\s*|#.*)$");
 
   private static final Pattern TRANSLITERATE_PATTERN = Pattern.compile(
-      "(.*){(.*?)}(.*)");
+      "(.*)\\{(.*?)\\}(.*)");
 
   public String translate(String str)
   {
@@ -67,8 +67,8 @@ class QuestionSource
     Matcher m;
     while ((m = TRANSLITERATE_PATTERN.matcher(str)).matches())
     {
-      String substr = m.group(2).replaceAll("(.)", "\\1");
-      str = m.group(1) + " " + m.group(2) + " " + m.group(3);
+      String substr = m.group(2).replaceAll("(.)", "$1 ");
+      str = m.group(1) + " \"" + substr + "\" " + m.group(3);
     }
     Log.i(TAG, str);
     return str;
