@@ -61,7 +61,7 @@ Question: reduction of a nitrile to an aldehyde
 Answer: dibal "H" followed by H2O workup
 
 Question: nitrile to a keetone
-Answer: RMgX (grignard) or RLi (organolithium) followed by H3O+ workup
+Answer: RMgX (grignard) or RLi (organolithium), followed by H3O+ workup
 
 
 Question: acid chloride to an acid anhydride
@@ -113,6 +113,6 @@ Answer: "ROH" and acid; remove water
 Question: carboxylic acid to a lactone
 Answer: "ROH" and acid; remove water
 
-Question: decarboxylation of a diecarboxylic acid to produce a carboxylic acid
+Question: decarboxylation of a diecarboxylic acid, to produce a carboxylic acid
 Answer: heat
 
