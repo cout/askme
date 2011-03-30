@@ -60,7 +60,7 @@ public class QuestionAsker
     {
       HashMap<String, String> params = new HashMap<String, String>();
       params.put(TextToSpeech.Engine.KEY_PARAM_UTTERANCE_ID, speech_id_);
-      tts_.setSpeechRate(0.75f);
+      tts_.setSpeechRate(0.65f);
       tts_.speak(
           speech_text_,
           TextToSpeech.QUEUE_FLUSH,
