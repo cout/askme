@@ -16,38 +16,38 @@ Answer: {H2O}
 Question: ester to a carboxylic acid (acid catalyzed)
 Answer: acid in {H2O}
 
-Question: hydrolysis of an ester ester, to produce a carboxylic acid
-(acid catalyzed)
-Answer: acid in {H2O}
+Question: hydrolysis of an ester, to produce a carboxylic acid (acid
+catalyzed)
+Answer: {H2O} and acid
 
 Question: ester to a carboxylic acid (base catalyzed)
-Answer: {OH} minus followed by {H+} workup
+Answer: {OH-} followed by {H+} workup
 
 Question: hydrolysis of an ester, to produce a carboxylic acid (base
 catalyzed)
-Answer: {OH} minus followed by {H+} workup
+Answer: {OH-} followed by {H+} workup
 
 Question: carboxylic acid to an ester
-Answer: {ROH}, acid, remove {H2O}
+Answer: {ROH} and acid, remove {H2O}
 
 Question: conversion of an ester to another ester (transesterification)
 Answer: {ROH} and acid
 
 Question: Grignard reaction with an ester, to produce an alcohol
-Answer: {RMgX} and {E T 2 O}
+Answer: {RMgX} and {ET2O}
 
 
 Question: amide to a carboxylic acid (acid catalyzed)
-Answer: acid in {H2O}
+Answer: {H2O} and acid
 
 Question: hydrolysis of an amide, to produce a carboxylic acid (acid catalyzed)
-Answer: acid in {H2O}
+Answer: {H2O} and acid
 
 Question: amide to a carboxylic acid (base catalyzed)
-Answer: {OH} minus followed by {H+} workup
+Answer: {OH-} followed by {H+} workup
 
 Question: hydrolysis of an amide, to produce a carboxylic acid (base catalyzed)
-Answer: {OH} minus followed by {H+} workup
+Answer: {OH-} followed by {H+} workup
 
 Question: carboxylic acid to an amide
 Answer: NH3 and heat
@@ -57,7 +57,7 @@ Question: nitrile to a carboxylic acid (acid catalyzed)
 Answer: {H3O+} and heat
 
 Question: amide to a carboxylic acid (base catalyzed)
-Answer: {OH} minus, {H2O}, and heat; followed by {H+} workup
+Answer: {OH-}, {H2O}, and heat; followed by {H+} workup
 
 Question: reduction of a nitrile to an aldehyde
 Answer: dibal {H} followed by H2O workup
@@ -70,7 +70,7 @@ Question: acid chloride to an acid anhydride
 Answer: enolate
 
 Question: acid chloride to an ester
-Answer: {ROH} in pyruvate
+Answer: {ROH} in pyridine
 
 Question: acid achloride to an amide
 Answer: R NHR prime
@@ -79,10 +79,10 @@ Question: acid anhydride to an ester
 Answer: {ROH}
 
 Question: acid anhydride to an amide
-Answer: R {NHR} prime
+Answer: {RNHR} prime
 
 Question: ester to an amide
-Answer: R {NHR} prime
+Answer: {RNHR} prime
 
 Question: amide to a nitrile
 Answer: {P4O} 10, heat and remove water
@@ -94,7 +94,7 @@ Answer: benzene and {ALCL3}
 Question: Friedel-crafts acylation, with an acid anhydride
 Answer: benzene and {ALCL3}
 
-Question: acid chloride to a keetone
+Question: acid chloride to an aryl keetone
 Answer: benzene and {ALCL3} (Friedel-crafts acylation)
 
 Question: acid anhydride to an aryl keetone
