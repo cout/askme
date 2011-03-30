@@ -6,11 +6,13 @@ import android.os.Handler;
 import android.speech.tts.TextToSpeech;
 import android.util.Log;
 import android.content.Context;
+import android.widget.Toast;
 
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Vector;
 import java.util.Random;
+import java.util.Locale;
 
 public class QuestionAsker
   implements TextToSpeech.OnInitListener,
@@ -33,8 +35,11 @@ public class QuestionAsker
 
   private TextToSpeech tts_;
 
+  private Context context_;
+
   public QuestionAsker(Context context)
   {
+    context_ = context;
     tts_ = new TextToSpeech(context, this);
   }
 
@@ -60,7 +65,6 @@ public class QuestionAsker
     {
       HashMap<String, String> params = new HashMap<String, String>();
       params.put(TextToSpeech.Engine.KEY_PARAM_UTTERANCE_ID, speech_id_);
-      tts_.setSpeechRate(0.65f);
       tts_.speak(
           speech_text_,
           TextToSpeech.QUEUE_FLUSH,
@@ -127,17 +131,43 @@ public class QuestionAsker
       }
       else
       {
-        result = tts_.setOnUtteranceCompletedListener(this);
-        if (result != TextToSpeech.SUCCESS)
-        {
-          Log.e(TAG, "Could not set utterance completed listener");
-        }
-        // start_button_.setEnabled(true);
+        init_tts();
       }
     }
     else
     {
       Log.e(TAG, "Could not initialize TextToSpeech.");
+    }
+  }
+
+  private void init_tts()
+  {
+    int result;
+
+    result = tts_.setOnUtteranceCompletedListener(this);
+    if (result != TextToSpeech.SUCCESS)
+    {
+      Log.e(TAG, "Could not set utterance completed listener");
+    }
+    // start_button_.setEnabled(true);
+    tts_.setSpeechRate(0.65f);
+
+    result = tts_.setLanguage(Locale.UK);
+
+    if (result != TextToSpeech.LANG_COUNTRY_VAR_AVAILABLE &&
+        result != TextToSpeech.LANG_COUNTRY_AVAILABLE)
+    {
+      Toast toast = Toast.makeText(
+          context_,
+          "Unable to set british locale",
+          Toast.LENGTH_LONG);
+      toast.show();
+
+      StringBuffer buf = new StringBuffer();
+      buf.append("Unable to set british locale (code=");
+      buf.append(new Integer(result).toString());
+      buf.append(")");
+      Log.e(TAG, buf.toString());
     }
   }
 }
