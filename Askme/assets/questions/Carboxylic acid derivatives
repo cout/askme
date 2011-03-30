@@ -1,64 +1,66 @@
 Question: acid chloride to a carboxylic acid
-Answer: "H2O"
+Answer: {H2O}
 
 Question: hydrolysis of an acid chloride, to produce a carboxylic acid
-Answer: "H2O"
+Answer: {H2O}
 
 Question: carboxylic acid to an acid chloride
-Answer: "SOCl2" or "PCl5"
+Answer: {SOCl2} or {PCl5}
 
 Question: acid anhydride to a carboxylic acid
-Answer: "H2O"
+Answer: {H2O}
 
 Question: hydrolysis of an acid anhydride, to produce a carboxylic acid
-Answer: "H2O"
+Answer: {H2O}
 
 Question: ester to a carboxylic acid (acid catalyzed)
-Answer: acid in "H2O"
+Answer: acid in {H2O}
 
-Question: hydrolysis of an ester ester, to produce a carboxylic acid (acid catalyzed)
-Answer: acid in "H2O"
+Question: hydrolysis of an ester ester, to produce a carboxylic acid
+(acid catalyzed)
+Answer: acid in {H2O}
 
 Question: ester to a carboxylic acid (base catalyzed)
-Answer: "OH" minus followed by "H+" workup
+Answer: {OH} minus followed by {H+} workup
 
-Question: hydrolysis of an ester, to produce a carboxylic acid (base catalyzed)
-Answer: "OH" minus followed by "H+" workup
+Question: hydrolysis of an ester, to produce a carboxylic acid (base
+catalyzed)
+Answer: {OH} minus followed by {H+} workup
 
 Question: carboxylic acid to an ester
-Answer: "ROH", acid, remove "H2O"
+Answer: {ROH}, acid, remove {H2O}
 
 Question: conversion of an ester to another ester (transesterification)
-Answer: "ROH" and acid
+Answer: {ROH} and acid
 
 Question: Grignard reaction with an ester, to produce an alcohol
-Answer: "RMgX" and "E T 2 O"
+Answer: {RMgX} and {E T 2 O}
 
 
 Question: amide to a carboxylic acid (acid catalyzed)
-Answer: acid in "H2O"
+Answer: acid in {H2O}
 
 Question: hydrolysis of an amide, to produce a carboxylic acid (acid catalyzed)
-Answer: acid in "H2O"
+Answer: acid in {H2O}
 
 Question: amide to a carboxylic acid (base catalyzed)
-Answer: "OH" minus followed by "H+" workup
+Answer: {OH} minus followed by {H+} workup
 
 Question: hydrolysis of an amide, to produce a carboxylic acid (base catalyzed)
-Answer: "OH" minus followed by "H+" workup
+Answer: {OH} minus followed by {H+} workup
 
 Question: carboxylic acid to an amide
 Answer: NH3 and heat
 
 
 Question: nitrile to a carboxylic acid (acid catalyzed)
-Answer: "H3O+" and heat
+Answer: {H3O+} and heat
 
 Question: amide to a carboxylic acid (base catalyzed)
-Answer: "OH" minus, "H2O", and heat; followed by "H+" workup
+Answer: {OH} minus, {H2O}, and heat; followed by {H+} workup
 
 Question: reduction of a nitrile to an aldehyde
-Answer: dibal "H" followed by H2O workup
+Answer: dibal {H} followed by H2O workup
 
 Question: nitrile to a keetone
 Answer: RMgX (grignard) or RLi (organolithium), followed by H3O+ workup
@@ -68,51 +70,52 @@ Question: acid chloride to an acid anhydride
 Answer: enolate
 
 Question: acid chloride to an ester
-Answer: "ROH" in pyruvate
+Answer: {ROH} in pyruvate
 
 Question: acid achloride to an amide
 Answer: R NHR prime
 
 Question: acid anhydride to an ester
-Answer: "ROH"
+Answer: {ROH}
 
 Question: acid anhydride to an amide
-Answer: R "NHR" prime
+Answer: R {NHR} prime
 
 Question: ester to an amide
-Answer: R "NHR" prime
+Answer: R {NHR} prime
 
 Question: amide to a nitrile
-Answer: "P4" "O10", heat and remove water
+Answer: {P4O} 10, heat and remove water
 
 
 Question: Friedel-crafts acylation, with an acid chloride
-Answer: benzene and "ALCL3"
+Answer: benzene and {ALCL3}
 
 Question: Friedel-crafts acylation, with an acid anhydride
-Answer: benzene and "ALCL3"
+Answer: benzene and {ALCL3}
 
 Question: acid chloride to a keetone
-Answer: benzene and "ALCL3" (Friedel-crafts acylation)
+Answer: benzene and {ALCL3} (Friedel-crafts acylation)
 
 Question: acid anhydride to an aryl keetone
-Answer: benzene and "ALCL3" (Friedel-crafts acylation)
+Answer: benzene and {ALCL3} (Friedel-crafts acylation)
 
 Question: reduction of a carboxylic acid to an alcohol
-Answer: "LAH" followed by "H3O+"
+Answer: {LAH} followed by {H3O+}
 
 Question: acid chloride to an aldehyde
-Answer: "LAH" followed by "H3O+"
+Answer: {LAH} followed by {H3O+}
 
 Question: reduction of an ester to an alcohol
-Answer: "LAH" followed by "H3O+"
+Answer: {LAH} followed by {H3O+}
 
 Question: Fischer esterification of a carboxylic acid
-Answer: "ROH" and acid; remove water
+Answer: {ROH} and acid; remove water
 
 Question: carboxylic acid to a lactone
-Answer: "ROH" and acid; remove water
+Answer: {ROH} and acid; remove water
 
-Question: decarboxylation of a diecarboxylic acid, to produce a carboxylic acid
+Question: decarboxylation of a diecarboxylic acid, to produce a
+carboxylic acid
 Answer: heat
 

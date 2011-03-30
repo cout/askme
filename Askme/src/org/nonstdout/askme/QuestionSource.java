@@ -58,6 +58,22 @@ class QuestionSource
   private static final Pattern COMMENT_PATTERN = Pattern.compile(
       "^(\\s*|#.*)$");
 
+  private static final Pattern TRANSLITERATE_PATTERN = Pattern.compile(
+      "(.*){(.*?)}(.*)");
+
+  public String translate(String str)
+  {
+    Log.i(TAG, str);
+    Matcher m;
+    while ((m = TRANSLITERATE_PATTERN.matcher(str)).matches())
+    {
+      String substr = m.group(2).replaceAll("(.)", "\\1");
+      str = m.group(1) + " " + m.group(2) + " " + m.group(3);
+    }
+    Log.i(TAG, str);
+    return str;
+  }
+
   public Vector<Question> read_question_pack(QuestionPack question_pack)
     throws java.io.IOException
   {
@@ -82,8 +98,8 @@ class QuestionSource
         if (!current_question.equals(""))
         {
           Question question = new Question(
-              current_question.toString(),
-              current_answer.toString());
+              translate(current_question.toString()),
+              translate(current_answer.toString()));
           questions.add(question);
 
           current_question = new StringBuffer(m.group(1));

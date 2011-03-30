@@ -1,18 +1,18 @@
 Question: oxidation of alkene, to make carboxylic acid
-Answer: "K M N O 4", "O H minus", and heat, followed by "H 3 O +"
+Answer: {KMNO4}, {OH} minus, and heat, followed by {H3O+}
 
 Question: oxidation of aldehyde, to make carboxylic acid
-Answer: "A G 2 O", followed by "H 3 O +"
+Answer: {AG2O}, followed by {H3O+}
 
 Question: oxidation of primary alcohol, to make carboxylic acid
-Answer: "A G 2 O", followed by "H 3 O +"
+Answer: {AG2O}, followed by {H3O+}
 
-Question: oxidation of alkylbenzene, to make benzene substituted carboxylic acid
-Answer: "K M N O 4", "O H minus", and heat, followed by "H 3 O +"
+Question: oxidation of alkyl-benzene, to make benzene substituted carboxylic acid
+Answer: {KMNO4}, {OH} minus, and heat, followed by {H3O+}
 
-Question: oxidation of alkylbenzene, to form carboxylic acid
-Answer: "O3" "C H 3 C O 2 H", followed by "H2O2"
+Question: oxidation of alkyl-benzene, to form carboxylic acid
+Answer: {O3} {CH3CO2H}, followed by {H2O2}
 
-Question: hydrolisis of cynaohydrin, to form carboxylic acid
-Answer: "HCN", followed by acid in "H2O"
+Question: hydrolisis of cyano-hydrin, to form carboxylic acid
+Answer: {HCN}, followed by acid in {H2O}
 

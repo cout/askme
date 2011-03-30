@@ -1,48 +1,48 @@
 # =====  Benzene derivatives  =====
 
-Question: "PKA" of "C6H5", "S O 3H"
+Question: {PKA} of {C6H5}, {SO3H}
 Answer: negative 6.5
 
-Question: "PKA" of "C6H5", "CO2H"
+Question: {PKA} of {C6H5}, {CO2H}
 Answer: 4.21
 
-Question: "PKA" of "C6H5", "NH3+"
+Question: {PKA} of {C6H5}, {NH3+}
 Answer: 4.63
 
-Question: "PKA" of "C6H5", "O H"
+Question: {PKA} of {C6H5}, {OH}
 Answer: 9.9
 
 # =====  Carboxylic acid derivatives  =====
 
-Question: "PKA" of "CF3", "C O O H"
+Question: {PKA} of {CF3}, {COOH}
 Aswer: point 1 8
 
-Question: "PKA" of "C H 3", "C O O H"
+Question: {PKA} of {C H 3}, {COOH}
 Answer: 4.75
 
-Question: "PKA" of "HO", "C O O H"
+Question: {PKA} of {HO}, {COOH}
 Answer: 6.35
 
-Question: "PKA" of "HO", "C O", "O minus"
+Question: {PKA} of {HO}, {CO}, {O} minus
 Answer: 10.2
 
 # =====  Alcohols  =====
 
-Question: "PKA" of "C H 3", "C H 2", "O H"
+Question: {PKA} of {CH3}, {CH2}, {OH}
 Answer: 16
 
 # 18 - pKa of (CH₃)₃COH
-Question: "PKA" of "C H 3 3", "C", "O H"
+Question: {PKA} of {CH33}, {C}, {OH}
 Answer: 18
 
 # =====  Ethers  =====
 
-Question: "PKA" of "C H 3", "C O", "C H 3"
+Question: {PKA} of {CH3}, {CO}, {CH3}
 Answer: 19.2
 
 # =====  Misc  =====
 
-Question: "PKA" of "H2S"
+Question: {PKA} of {H2S}
 Answer: 7
 
 # -12 - pKa of KSbF₆

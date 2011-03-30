@@ -1,51 +1,51 @@
 # =====  H-X  =====
-Question: "PKA" of hydrogen iodide
+Question: {PKA} of hydrogen iodide
 Answer: negative 10
 
-Question: "PKA" of hydrogen bromide
+Question: {PKA} of hydrogen bromide
 Answer: negative 9
 
-Question: "PKA" of hydrogen chloride
+Question: {PKA} of hydrogen chloride
 Answer: negative 7
 
-Question: "PKA" of hydrogen fluoride
+Question: {PKA} of hydrogen fluoride
 Answer: 3.2
 
 # =====  Sulfuric acid  =====
-Question: "PKA" of sulfuric acid
+Question: {PKA} of sulfuric acid
 Answer: negative 9
-Question: "PKA" of "H2SO4"
+Question: {PKA} of {H2SO4}
 Answer: negative 9
 
 # =====  Misc  =====
-Question: "PKA" of "H3O+"
+Question: {PKA} of {H3O+}
 Answer: negative 1.74
 
-Question: "PKA" of "HNO3"
+Question: {PKA} of {HNO3}
 Answer: negative 1.4
 
-Question: "PKA" of "NH4+"
+Question: {PKA} of {NH4+}
 Answer: 9.2
 
-Question: "PKA" of "H2O"
+Question: {PKA} of {H2O}
 Answer: 15.7
 
-Question: "PKA" of water
+Question: {PKA} of water
 Answer: 15.7
 
-Question: "PKA" of "NH3"
+Question: {PKA} of {NH3}
 Answer: 38
 
 # =====  Alkanes  =====
-Question: "PKA" of "CH4"
+Question: {PKA} of {CH4}
 Answer: 48
 
-Question: "PKA" of ethyne
+Question: {PKA} of ethyne
 Answer: 25
 
-Question: "PKA" of ethene
+Question: {PKA} of ethene
 Answer: 44
 
-Question: "PKA" of ethane
+Question: {PKA} of ethane
 Answer: 50
 
