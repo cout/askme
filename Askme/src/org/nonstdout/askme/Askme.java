@@ -14,6 +14,8 @@ import android.widget.Toast;
 import android.view.View;
 import android.util.SparseBooleanArray;
 import android.util.Log;
+import android.content.Intent;
+import android.speech.tts.TextToSpeech;
 
 import java.util.ArrayList;
 import java.util.Vector;
@@ -53,12 +55,29 @@ public class Askme
     return question_packs;
   }
 
-  /** Called when the activity is first created. */
-  @Override
-  public void onCreate(Bundle savedInstanceState)
-  {
-    super.onCreate(savedInstanceState);
+  private static final int DATA_CHECK_CODE = 1;
 
+  @Override
+  protected void onActivityResult(int requestCode, int resultCode, Intent data)
+  {
+    if (requestCode == DATA_CHECK_CODE)
+    {
+      if (resultCode == TextToSpeech.Engine.CHECK_VOICE_DATA_PASS)
+      {
+        run();
+      }
+      else
+      {
+        // missing data, install it
+        Intent installIntent = new Intent();
+        installIntent.setAction(TextToSpeech.Engine.ACTION_INSTALL_TTS_DATA);
+        startActivity(installIntent);
+      }
+    }
+  }
+
+  private void run()
+  {
     setContentView(R.layout.main);
 
     question_asker_ = new QuestionAsker(this);
@@ -89,6 +108,16 @@ public class Askme
         stop();
       }
     });
+  }
+
+  @Override
+  public void onCreate(Bundle savedInstanceState)
+  {
+    super.onCreate(savedInstanceState);
+
+    Intent intent = new Intent();
+    intent.setAction(TextToSpeech.Engine.ACTION_CHECK_TTS_DATA);
+    startActivityForResult(intent, DATA_CHECK_CODE);
   }
 
   @Override

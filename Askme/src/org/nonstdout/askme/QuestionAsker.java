@@ -6,7 +6,6 @@ import android.os.Handler;
 import android.speech.tts.TextToSpeech;
 import android.util.Log;
 import android.content.Context;
-import android.content.Intent;
 
 import java.util.HashMap;
 import java.util.Locale;
@@ -36,10 +35,6 @@ public class QuestionAsker
 
   public QuestionAsker(Context context)
   {
-    Intent intent = new Intent();
-    intent.setAction(TextToSpeech.Engine.ACTION_INSTALL_TTS_DATA);
-    context.startActivity(intent);
-
     tts_ = new TextToSpeech(context, this);
   }
 
