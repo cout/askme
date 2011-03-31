@@ -1,12 +1,18 @@
-/*
+package org.nonstdout.askme;
+
 import android.widget.Toast;
-import android.content.Context;
 import android.content.Intent;
-import android.content.Service;
+import android.app.Service;
+import android.os.IBinder;
+import android.os.Message;
+import android.os.Looper;
+import android.os.Process;
+import android.os.Handler;
+import android.os.HandlerThread;
 
 import org.nonstdout.askme.Question;
 
-public class QuestionService
+class QuestionService
   extends Service
 {
   public final class ServiceHandler extends Handler
@@ -23,13 +29,6 @@ public class QuestionService
     }
   }
 
-  public QuestionService(QuestionAsker asker)
-  {
-    super("QuestionService");
-
-    context_ = context;
-  }
-
   @Override
   public void onCreate()
   {
@@ -40,11 +39,6 @@ public class QuestionService
 
     service_looper_ = thread.getLooper();
     service_handler_ = new ServiceHandler(service_looper_);
-  }
-
-  @Override
-  public int onStartCommand(Intent intent, int flags, int start_id)
-  {
   }
 
   @Override
@@ -60,5 +54,6 @@ public class QuestionService
   }
 
   private QuestionAsker asker_;
+  private Looper service_looper_;
+  private ServiceHandler service_handler_;
 }
-*/
