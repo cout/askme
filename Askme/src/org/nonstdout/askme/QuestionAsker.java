@@ -3,6 +3,7 @@ package org.nonstdout.askme;
 import org.nonstdout.askme.Question;
 
 import android.os.Handler;
+import android.os.PowerManager;
 import android.speech.tts.TextToSpeech;
 import android.util.Log;
 import android.content.Context;
@@ -37,14 +38,19 @@ public class QuestionAsker
 
   private Context context_;
 
+  private PowerManager.WakeLock wake_lock_;
+
   public QuestionAsker(Context context)
   {
     context_ = context;
     tts_ = new TextToSpeech(context, this);
+    PowerManager pm = (PowerManager) context.getSystemService(Context.POWER_SERVICE);
+    PowerManager.WakeLock wl = pm.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, TAG);
   }
 
   public void start()
   {
+    wake_lock_.acquire();
     next_question(0);
   }
 
@@ -52,6 +58,7 @@ public class QuestionAsker
   {
     tts_.stop();
     handler_.removeCallbacks(speech_task_);
+    wake_lock_.release();
   }
 
   public void shutdown()
