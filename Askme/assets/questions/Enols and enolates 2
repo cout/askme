@@ -1,0 +1,79 @@
+# Question: {RNHR} on a ketone with two alpha hydrogens does this
+# Answer: replaces O with {NR2}, and creates a double bond between
+# the carbonyl carbon and alpha carbon
+
+Question: Kinetic enolate pi bond forms here
+Answer: between carbonyl carbon and less substituted alpha carbon
+
+Question: Thermodynamic enolate pi bond forms here
+Answer: between carbonyl carbon and more substituted alpha carbon
+
+Question: why does the thermodynamic enolate form with a weak base in a
+protic solvent?
+Answer: the double bond to a more substituted carbon is more stable
+
+Question: why does the kinetic enolate form with a strong sterically
+hindered base?
+Answer: the sterically hindered base removes the less hindered proton
+faster
+
+Question: type of reagent to form thermodynamic enolate
+Answer: weak base in a protic solvent
+
+Question: type of reagent to form kinetic enolate
+Answer: strong, non-nucleophilic, sterically hindered base
+
+Question: specific reagent to form kinetic enolate
+Answer: {LDA} and {THF}
+
+Question: rate limiting step of acid-catalyzed enolation
+Answer: deprotonation of alpha carbon
+
+Question: rate limiting step of base-catalyzed enolation
+Answer: deprotonation of alpha carbon
+
+Question: steps in mechanism of acid-catalyzed enol formation
+Answer: protonate oxygen then deprotonate alpha carbon
+
+Question: steps in mechanism of base-catalyzed enol formation
+Answer: deprotonate alpha carbon then protonate oxygen with acid
+
+Question: reagents for haloform reaction
+Answer: {OH-} and {X2}
+
+Question: condition for multiple halogen additions to methyl ketone
+Answer: there must be a base present
+
+Question: why will compounds with a hydrogen alpha to carbonyl be
+acidic?
+Answer: stability of ion
+
+Question: keto and enol forms are these kinds of isomers
+Answer: tautomers, or constitutional isomers that are in equilibrium
+with each other
+
+Question: what is an epimer?
+Answer: a diastereomer in which only one stereocenter is racemized
+
+Question: a beta keto ester has this property
+Answer: two carbonyls that are at beta positions relative to each other
+
+Question: what is an active hydrogen compound?
+Answer: generally, a compound that has two electron withdrawing groups
+attached to the same carbon atom
+
+Question: what happens if you try to add a secondary or tertiary alkyl
+via direct alkylation?
+Answer: the enolate acts as a base instead of a nucleophile and forms
+elimination products
+
+# Question: where is the most electrophilic place on an acid halide?
+# Answer: the carbonyl
+
+Question: these carboxylic acids decarboxylate readily
+Answer: beta keto acids
+
+Question: what are the two ways a beta keto acid can decarboxylate?
+Answer: through a six-membered cyclic transition state, which avoids an
+anionic intermediate, or by forming a resonance-stabilized anion
+

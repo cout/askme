@@ -50,7 +50,7 @@ Question: hydrolysis of an amide, to produce a carboxylic acid (base catalyzed)
 Answer: {OH-} followed by {H+} workup
 
 Question: carboxylic acid to an amide
-Answer: NH3 and heat
+Answer: {NH3} and heat
 
 
 Question: nitrile to a carboxylic acid (acid catalyzed)
@@ -60,10 +60,10 @@ Question: amide to a carboxylic acid (base catalyzed)
 Answer: {OH-}, {H2O}, and heat; followed by {H+} workup
 
 Question: reduction of a nitrile to an aldehyde
-Answer: dibal {H} followed by H2O workup
+Answer: dibal-H followed by H2O workup
 
 Question: nitrile to a keetone
-Answer: RMgX (grignard) or RLi (organolithium), followed by H3O+ workup
+Answer: {RMgX} (grignard) or {RLi} (organolithium), followed by {H3O+} workup
 
 
 Question: acid chloride to an acid anhydride
@@ -73,16 +73,16 @@ Question: acid chloride to an ester
 Answer: {ROH} in pyridine
 
 Question: acid achloride to an amide
-Answer: R NHR prime
+Answer: {RNHR'}
 
 Question: acid anhydride to an ester
 Answer: {ROH}
 
 Question: acid anhydride to an amide
-Answer: {RNHR} prime
+Answer: {RNHR'}
 
 Question: ester to an amide
-Answer: {RNHR} prime
+Answer: {RNHR'}
 
 Question: amide to a nitrile
 Answer: {P4O} 10, heat and remove water

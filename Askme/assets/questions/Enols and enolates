@@ -10,8 +10,8 @@ Answer: {PBr3} followed by {H2O}
 Question: reagents for direct alkylation 
 Answer: LDA and THF to form kinetic enolate, then R dash X
 
-# Question: reagents for direct alkylation of ester
-# Answer: LDA and THF to form kinetic enolate, R dash C dash X
+Question: reagents for direct alkylation of ester
+Answer: LDA and THF to form kinetic enolate, then {R CH2 X}
 
 Question: reagents for acetoacitic ester synthesis
 Answer: {NaOEt}, followed by {RBr}, followed by {OH-}, followed by
@@ -21,9 +21,9 @@ Question: reagents for malonic ester synthesis
 Answer: {NaOEt}, followed by {RBr}, followed by {OH-}, followed by
 {H3O+} and heat
 
-# Question: reagents for stork enamine reaction
-# Answer: {RNHR}, followed by R dash C dash {Br}, followed by heat,
-# followed by {H2O}
+Question: reagents for stork enamine reaction
+Answer: {RNHR}, followed by {R'' CH2 Br}, followed by heat,
+followed by {H2O}
 
 Question: {X2} does this to an aldehyde or ketone
 Answer: adds halogen at alpha carbon
@@ -34,7 +34,7 @@ Answer: adds halogen to alpha carbon
 Question: R dash X on an enolate does this
 Answer: adds alkyl at alpha carbon
 
-Question: {LDA} plus {THF} at minus 78 degrees C does this
+Question: {LDA} plus {THF} at -78 degrees C does this
 Answer: forms kinetic enolate
 
 Question: {NaOEt} followed by {RBr}, does this, to a dicarboxylic acid
@@ -47,8 +47,4 @@ Answer: splits molecule at alpha carbon
 Question: {OH-} followed by {H3O+}, followed by heat does this, to a
 diester
 Answer: splits molecule at alpha carbon, {OH} is added and {OR} leaves
-
-Question: {RNHR} on a ketone with two alpha hydrogens does this
-Answer: replaces O with {NR2}, and creates a double bond between
-the carbonyl carbon and alpha carbon
 
