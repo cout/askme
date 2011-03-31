@@ -27,10 +27,10 @@ Question: specific reagent to form kinetic enolate
 Answer: {LDA} and {THF}
 
 Question: rate limiting step of acid-catalyzed enolation
-Answer: deprotonation of alpha carbon
+Answer: deprotonation of alpha carbon of enol
 
 Question: rate limiting step of base-catalyzed enolation
-Answer: deprotonation of alpha carbon
+Answer: deprotonation of alpha carbon of ketone to form enolate
 
 Question: steps in mechanism of acid-catalyzed enol formation
 Answer: protonate oxygen then deprotonate alpha carbon
@@ -76,4 +76,12 @@ Answer: beta keto acids
 Question: what are the two ways a beta keto acid can decarboxylate?
 Answer: through a six-membered cyclic transition state, which avoids an
 anionic intermediate, or by forming a resonance-stabilized anion
+
+Question: use this base for first enolation in acetoacetic or malonic
+ester synthesis
+Answer: {NAOEt}
+
+Question: use this base for second enolation in acetoacetic or malonic
+ester synthesis
+Answer: T Bu O minus, or H minus (i.e. {NaBH4})
 

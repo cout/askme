@@ -43,9 +43,8 @@ public class QuestionAsker
     tts_ = new TextToSpeech(context, this);
   }
 
-  public void start(Vector<Question> questions)
+  public void start()
   {
-    questions_ = questions;
     next_question(0);
   }
 
@@ -169,6 +168,11 @@ public class QuestionAsker
       buf.append(")");
       Log.e(TAG, buf.toString());
     }
+  }
+
+  public void use_questions(Vector<Question> questions)
+  {
+    questions_ = questions;
   }
 }
 

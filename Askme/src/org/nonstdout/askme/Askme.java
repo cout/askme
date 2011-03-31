@@ -4,6 +4,7 @@ import org.nonstdout.askme.Question;
 import org.nonstdout.askme.QuestionAsker;
 import org.nonstdout.askme.QuestionSource;
 import org.nonstdout.askme.QuestionPack;
+// import org.nonstdout.askme.QuestionService;
 
 import android.app.ListActivity;
 import android.os.Bundle;
@@ -33,6 +34,8 @@ public class Askme
   private Vector<QuestionPack> question_packs_;
 
   private ArrayAdapter<QuestionPack> list_adapter_;
+
+  private Intent question_intent_;
 
   private Vector<QuestionPack> get_question_packs()
   {
@@ -82,6 +85,8 @@ public class Askme
 
     question_asker_ = new QuestionAsker(this);
     question_source_ = new QuestionSource(this);
+
+    // question_intent_ = new Intent(this, QuestionService.class);
 
     question_packs_ = get_question_packs();
 
@@ -158,7 +163,10 @@ public class Askme
       }
     }
 
-    question_asker_.start(questions);
+    question_asker_.use_questions(questions);
+
+    question_asker_.start();
+    // startService(intent);
   }
 
   private void stop()

@@ -50,10 +50,10 @@ class QuestionSource
   }
 
   private static final Pattern QUESTION_PATTERN = Pattern.compile(
-      "(?i)^Question:\\s(.*)");
+      "(?i)^Question:\\s*(.*)");
 
   private static final Pattern ANSWER_PATTERN = Pattern.compile(
-      "(?i)^Answer:\\s(.*)");
+      "(?i)^Answer:\\s*(.*)");
  
   private static final Pattern COMMENT_PATTERN = Pattern.compile(
       "^(\\s*|#.*)$");
@@ -63,14 +63,15 @@ class QuestionSource
 
   public String translate(String str)
   {
-    Log.i(TAG, str);
     Matcher m;
     while ((m = TRANSLITERATE_PATTERN.matcher(str)).matches())
     {
       String substr = m.group(2).replaceAll("(.)", "$1 ");
+      substr = substr.replaceAll("'''", "triple prime");
+      substr = substr.replaceAll("''", "double prime");
+      substr = substr.replaceAll("'", "prime");
       str = m.group(1) + " \"" + substr + "\" " + m.group(3);
     }
-    Log.i(TAG, str);
     return str;
   }
 
@@ -95,17 +96,17 @@ class QuestionSource
 
       if ((m = QUESTION_PATTERN.matcher(line)).matches())
       {
-        if (!current_question.equals(""))
+        if (current_question.length() != 0)
         {
           Question question = new Question(
               translate(current_question.toString()),
               translate(current_answer.toString()));
           questions.add(question);
-
-          current_question = new StringBuffer(m.group(1));
-          current_answer = new StringBuffer();
-          append_to = current_question;
         }
+
+        current_question = new StringBuffer(m.group(1));
+        current_answer = new StringBuffer();
+        append_to = current_question;
       }
       else if ((m = ANSWER_PATTERN.matcher(line)).matches())
       {
@@ -120,6 +121,14 @@ class QuestionSource
       {
         append_to.append(line);
       }
+    }
+
+    if (current_question.length() != 0)
+    {
+      Question question = new Question(
+          translate(current_question.toString()),
+          translate(current_answer.toString()));
+      questions.add(question);
     }
 
     in.close();
