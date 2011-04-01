@@ -45,7 +45,7 @@ public class QuestionAsker
     context_ = context;
     tts_ = new TextToSpeech(context, this);
     PowerManager pm = (PowerManager) context.getSystemService(Context.POWER_SERVICE);
-    PowerManager.WakeLock wl = pm.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, TAG);
+    wake_lock_ = pm.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, TAG);
   }
 
   public void start()
