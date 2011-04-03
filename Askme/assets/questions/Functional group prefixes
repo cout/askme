@@ -1,0 +1,57 @@
+Question: {COOH} prefix
+Answer: carboxy
+
+Question: Ester prefix
+Answer: alkoxy carbonyl
+
+Question: Amide prefix
+Answer: amido
+
+Question: Nitrile prefix
+Answer: cyano
+
+Question: Aldehyde prefix
+Answer: oxo
+
+Question: Ketone prefix
+Answer: oxo
+
+Question: Alcohol prefix
+Answer: hydroxy
+
+Question Amine prefix
+Answer: amino
+
+Question: Alkene prefix
+Answer: alkenyl
+
+Question: Alkyne prefix
+Answer: alkynyl
+
+Question: functional group with prefix of carboxy
+Answer: {COOH}
+
+Question: functional group with prefix of alkoxy carbonyl
+Answer: ester
+
+Question: functional group with prefix of amido
+Answer: amide
+
+Question: functional group with prefix of cyano
+Answer: nitrile
+
+Question: functional group with prefix of oxo
+Answer: aldehyde or ketone
+
+Question: functional group with prefix of hydroxy
+Answer: alcohol
+
+Question: functional group with prefix of amino
+Answer: amine
+
+Question: functional group with prefix of alkenyl
+Answer: alkene
+
+Question: functional group with prefix of alkynyl
+Answer: alkyne
+

@@ -50,7 +50,7 @@ Question: reagents for hydrolysis of an amide, to produce a carboxylic acid (bas
 Answer: {OH-} followed by {H+} workup
 
 Question: reagents to convert carboxylic acid to an amide
-Answer: {NH3} and heat
+Answer: {NH3} and heat, or alternatively, {DCC}
 
 
 Question: reagents to convert nitrile to a carboxylic acid (acid catalyzed)
@@ -71,6 +71,9 @@ Answer: enolate
 
 Question: reagents to convert acid chloride to an ester
 Answer: {ROH} in pyridine
+
+Question: {ROH} in pyridine does this to an acid chloride
+Answer: converts it to an ester
 
 Question: reagents to convert acid achloride to an amide
 Answer: {RNHR'}
@@ -118,4 +121,16 @@ Answer: {ROH} and acid; remove water
 Question: reagents for decarboxylation of a diecarboxylic acid, to
 produce a carboxylic acid
 Answer: heat
+
+Question: common mechanism for carboxylic acid reactions
+Answer: addition elimination
+
+Question: reagents to convert a nitrile to a ketone
+Answer: Grignard followed by hydrolysis
+
+Question: reagents to convert a nitrile to an amine
+Answer: {LAH} followed by {H2O} or {H3O+}
+
+Question: reagents to convert a nitrile to an aldehyde
+Answer: DIBAL-H followed by {H3O+}
 

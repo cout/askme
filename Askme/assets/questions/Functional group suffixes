@@ -1,0 +1,60 @@
+Question: {COOH} suffix
+Answer: dash oic acid
+
+Question: Ester suffix
+Answer: dash oate
+
+Question: Amide suffix
+Answer: dash amide
+
+Question: Nitrile suffix
+Answer: dash nitrile
+
+Question: Aldehyde suffix
+Answer: dash {al}
+
+Question: Ketone suffix
+Answer: dash {one}
+
+Question: Alcohol suffix
+Answer: dash {ol}
+
+Question Amine suffix
+Answer: dash amine
+
+Question: Alkene suffix
+Answer: dash {ene}
+
+Question: Alkyne suffix
+Answer: dash {yne}
+
+Question: functional group with dash oic acid suffix
+Answer: {COOH}
+
+Question: functional group with dash oate suffix
+Answer: ester
+
+Question: functional group with dash amide suffix
+Answer: amide
+
+Question: functional group with dash nitrile suffix
+Answer: nitrile
+
+Question: functional group with dash {al} suffix
+Answer: aldehyde
+
+Question: functional group with dash {one} suffix
+Answer: keton
+
+Question: functional group with dash {ol} suffix
+Answer: alcohol
+
+Question: functional group with dash amine suffix
+Answer: amine
+
+Question: functional group with dash {ene} suffix
+Answer: alkene
+
+Question: functional group with dash {yne} suffix
+Answer: alkyne
+
