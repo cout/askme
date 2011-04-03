@@ -70,6 +70,8 @@ class QuestionSource
       substr = substr.replaceAll("'''", "triple prime");
       substr = substr.replaceAll("''", "double prime");
       substr = substr.replaceAll("'", "prime");
+      substr = substr.replaceAll("-", "minus");
+      substr = substr.replaceAll("+", "plus");
       str = m.group(1) + " \"" + substr + "\" " + m.group(3);
     }
     return str;
