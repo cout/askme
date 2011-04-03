@@ -5,23 +5,15 @@
   android:layout_height="fill_parent"
   >
 
-  <ScrollView
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:layout_alignParentTop="true"
-    android:fillViewport="true"
-    >
-
-    <ListView
-      android:id="@android:id/list"
-      android:layout_width="fill_parent" 
-      android:layout_height="fill_parent" 
-      />
-      <!-- android:stackFromBotton="true" -->
-      <!-- android:transcriptMode="normal" -->
-      <!-- android:layout_weight="normal" -->
-      <!-- android:drawSelectorOnTop="false" -->
-  </ScrollView>
+  <ListView
+    android:id="@android:id/list"
+    android:layout_width="fill_parent" 
+    android:layout_height="fill_parent" 
+    />
+    <!-- android:stackFromBotton="true" -->
+    <!-- android:transcriptMode="normal" -->
+    <!-- android:layout_weight="normal" -->
+    <!-- android:drawSelectorOnTop="false" -->
 
   <LinearLayout
     android:orientation="horizontal"
