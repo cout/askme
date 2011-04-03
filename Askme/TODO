@@ -1,0 +1,13 @@
+- Scrolling through list does not work
+- List vertical size should be screen size minus button size (list
+  overlaps buttons)
+- Should be able to read questions from sdcard
+- Need question editor
+- Add settings activity
+  - Speech speed
+  - Speech locale (voice)
+  - Wake lock
+- Add app to market
+  - Need icon
+  - Need screenshots
+
