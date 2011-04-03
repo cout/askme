@@ -1,17 +1,17 @@
 Question: reagents for halogenation of aldehyde or ketone
 Answer: {X2} plus acid or base
 
-Question: reagents for HVZ
+Question: reagents for {HVZ}
 Answer: {PBr3} followed by {H2O}
 
 Question: reagents for halogenation of carboxylic acid
 Answer: {PBr3} followed by {H2O}
 
 Question: reagents for direct alkylation 
-Answer: LDA and THF to form kinetic enolate, then R dash X
+Answer: {LDA} and {THF} to form kinetic enolate, then R dash X
 
 Question: reagents for direct alkylation of ester
-Answer: LDA and THF to form kinetic enolate, then {R CH2 X}
+Answer: {LDA} and {THF} to form kinetic enolate, then {R CH2 X}
 
 Question: reagents for acetoacitic ester synthesis
 Answer: {NaOEt}, followed by {RBr}, followed by {OH-}, followed by
@@ -42,9 +42,10 @@ Answer: adds alkyl at central alpha carbon
 
 Question: {OH-} followed by {H3O+}, followed by heat does this, to a
 dicarboxylic acid
-Answer: splits molecule at alpha carbon
+Answer: splits molecule at alpha carbon by decarboxylation
 
 Question: {OH-} followed by {H3O+}, followed by heat does this, to a
 diester
-Answer: splits molecule at alpha carbon, {OH} is added and {OR} leaves
+Answer: splits molecule at alpha carbon by decarboxylation; {OH} is
+added and {OR} leaves
 
