@@ -10,14 +10,37 @@ Answer: acetic acid, formally known as ethanoic acid
 Question: common name for dicarboxylic acid separated by 0 carbons
 Answer: oxalic acid
 
-# Question: common name for dicarboxylic acid separated by 1 carbons
-# Answer: ?
+Question: common name for dicarboxylic acid separated by 1 carbons
+Answer: malonic acid
 
-# Question: common name for dicarboxylic acid separated by 2 carbons
-# Answer: ?
+Question: common name for dicarboxylic acid separated by 2 carbons
+Answer: succinic acid
 
 Question: common name for dicarboxylic acid separated by 3 carbons
 Answer: glutaric acid
+
+Question: common name for dicarboxylic acid separated by 4 carbons
+Answer: adipic acid
+
+Question: common name for dicarboxylic acid separated by 5 carbons
+Answer: pimelic acid
+
+Question: common name for dicarboxylic acid separated by 6 carbons
+Answer: suberic acid
+
+Question: common name for dicarboxylic acid separated by 7 carbons
+Answer: azaleic acid
+
+Question: common name for dicarboxylic acid separated by 8 carbons
+Answer: sebasic acid
+
+Question: common name for dicarboxylic acid separated by 2 double-bonded
+carbons in the cis conformation
+Answer: maleic acid
+
+Question: common name for dicarboxylic acid separated by 2 double-bonded
+carbons in the trans conformation
+Answer: fumaric acid
 
 Question: common name for phenyl with carboxylic acid ortho to {OH} group
 Answer: salicylic acid, also known as aspirin
